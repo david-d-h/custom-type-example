@@ -1,0 +1,10 @@
+CREATE TYPE PASSCODE AS (
+    code CHAR(24)
+);
+
+CREATE TABLE users (
+    id BIGSERIAL,
+    uuid UUID NOT NULL,
+    code PASSCODE NOT NULL,
+    PRIMARY KEY (id)
+);
